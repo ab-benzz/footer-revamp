@@ -221,7 +221,7 @@ footer div:first-child > form {
 }
 
 .banner-container > div > a {
-  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-size: clamp(0.7rem, 2vw, 0.8rem);
   text-decoration: underline;
 }
 
