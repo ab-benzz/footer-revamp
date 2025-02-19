@@ -1,0 +1,679 @@
+:root {
+  --primary-color: #1e22aa;
+  --secondary-color: #fae100;
+  --white-color: #fdfcff;
+  --main-text-color: #4c525c;
+  --sub-text-color: #767676;
+
+  --sub-blue-color: #d7f1ff;
+  --ter-blue-color: #1877f2;
+  --card-radius: 1rem;
+  --form-invalid-color: #ff2222;
+  --max-vw: 87.5rem;
+  --main-padding: 0 1.875rem;
+  --main-border-radius: 1.25rem;
+  --p-font-size: 0.92rem;
+  --dropdown-transition: 0.5s ease-out;
+  --hover-on-blue-bg: rgba(0, 0, 0, 0.3);
+  --popup-radius: 0.93rem;
+  --popup-box-shadow: 0px 106px 42px rgba(0, 0, 0, 0.01),
+    0px 60px 36px rgba(0, 0, 0, 0.05), 0px 27px 27px rgba(0, 0, 0, 0.09),
+    0px 7px 15px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0); /* Start position */
+  }
+  50% {
+    transform: translateY(-0.5rem); /* Move up */
+  }
+  100% {
+    transform: translateY(0); /* Back to start */
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scrollbar-gutter: stable;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+}
+
+h2,
+p {
+  color: var(--main-text-color);
+  line-height: clamp(1rem, 3vw, 1.5rem);
+}
+h1 {
+  font-weight: 600;
+  line-height: 1;
+}
+p {
+  font-size: var(--p-font-size);
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-text-color);
+}
+
+/* Footer --- Footer --- Footer  --- Footer   --- Footer */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 2rem;
+  width: 100%;
+  /* background-color: var(--primary-color); */
+  background-image: url("images/footer_img/footer_background.webp");
+}
+.footer-main {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-bottom,
+.footer-bottom div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-bottom ul {
+  display: flex;
+  gap: clamp(0.5rem, 5vw, 1rem);
+  text-decoration: underline;
+  color: var(--white-color);
+}
+
+.footer-bottom div {
+  margin: 1rem 0;
+}
+
+.footer-bottom p {
+  padding: 1rem 0;
+}
+
+.footer-p-mobile {
+  text-align: center;
+  width: 80%;
+}
+
+footer label,
+footer a,
+footer p {
+  color: var(--white-color);
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.h2-hidden,
+.payment-methods-h2 {
+  display: none;
+}
+footer a {
+  font-weight: 300;
+}
+footer a:hover {
+  color: var(--secondary-color);
+}
+footer h2 {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  text-wrap: nowrap;
+}
+
+footer hr {
+  border: none;
+  background-color: #dfdfdf;
+  opacity: 50%;
+  height: 1px;
+  margin: 0 auto;
+  width: 100%;
+}
+footer ul {
+  margin-left: 0rem;
+}
+
+.banner-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.footer-second-div {
+  display: flex;
+  flex-direction: column;
+  /* max-width: 40rem; */
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 8%;
+}
+
+.footer-main > div:nth-child(1) {
+  order: 1;
+}
+.footer-main > div:nth-child(2) {
+  padding: 0 8%;
+  order: 3;
+}
+.footer-main > div:nth-child(3) {
+  padding: 0 8%;
+  order: 2;
+}
+
+/*  Footer first div child  -----------------1st*/
+.footer-first-child > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-cta p,
+.footer-p-desktop,
+.footer-contacts > p,
+footer div:first-child > h1,
+footer div:first-child > form {
+  display: none;
+}
+
+.footer-p-hidden {
+  margin-bottom: 12px;
+}
+
+.footer-banner-img {
+  width: 100%;
+  height: auto;
+}
+
+.banner-container {
+  position: relative;
+}
+
+.banner-container > div {
+  display: flex;
+  gap: clamp(0.3rem, 2vw, 1.5rem);
+  position: absolute;
+  bottom: 28%;
+  right: 6%;
+  color: var(--white-color);
+}
+
+.banner-container > div > a {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  text-decoration: underline;
+}
+
+/*  Footer second div child  ---------------2nd*/
+.footer-second-div {
+  margin-top: 2rem;
+}
+.footer-second-div hr {
+  margin: 1rem 0;
+}
+.footer-section > h2 {
+  display: none;
+}
+/*  Footer third div child  ---------------3rd*/
+
+.footer-third-div {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem auto;
+  gap: 1rem;
+}
+
+.footer-social-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: clamp(1rem, 8vw, 2.5rem); */
+  margin: 0 auto;
+  overflow-x: hidden;
+  padding: 1rem;
+  max-width: 40rem;
+}
+.footer-social-icons a:hover {
+  transform: scale(1.1);
+}
+
+.footer-social-icons a:hover path {
+  fill: var(--secondary-color);
+}
+
+.footer-social-icons a svg {
+  width: 100%;
+  height: auto;
+}
+
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  color: var(--white-color);
+  gap: 0.5rem;
+}
+
+.footer-contacts h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.footer-contacts > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer-contacts > ul > li {
+  display: flex;
+  gap: 0.8rem;
+}
+.footer-contacts p {
+  margin-top: 0.5rem;
+}
+
+.footer-payment-icons {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  max-width: 30rem;
+}
+
+.footer-payment-icons li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-payment-icons img:hover {
+  transform: scale(1.15);
+}
+
+/* Dropdown footer-second-div mobile view */
+.dropdown-checkbox {
+  display: none; /* Hide the checkbox, this is for the dropdown of footer 2nd div*/
+}
+
+.dropdown-toggle {
+  display: block;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  transition: ease-in-out 1s;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: var(--dropdown-transition);
+}
+
+.dropdown-content li {
+  padding: 10px;
+}
+
+.dropdown-content li a {
+  text-decoration: none;
+  display: block;
+  transition: color 0.3s;
+}
+
+/* Toggle Dropdown on Checkbox Check */
+.dropdown-checkbox:checked ~ .dropdown-content {
+  max-height: 20rem;
+}
+
+.dropdown-checkbox:checked ~ .dropdown-toggle img {
+  rotate: 180deg;
+}
+
+.footer-contacts-show {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-contacts-toggle {
+  border: 1px solid var(--white-color);
+  width: fit-content;
+  padding: 0.1rem 1rem;
+  border-radius: 2rem;
+  margin-top: 1rem;
+}
+
+.footer-banner-img-confetti,
+.footer-banner-img-cover,
+#footer-contacts-see-more,
+.footer-third-last-child div hr,
+.f-contacts-hide,
+.footer-contacts input,
+.footer-contacts label {
+  display: none;
+}
+
+/* See more button in footer mobilev view */
+#footer-contacts-see-more:checked ~ .f-contacts-hide {
+  display: flex;
+}
+
+#footer-contacts-see-more:checked + .footer-contacts-toggle::after {
+  content: "See less";
+}
+#footer-contacts-see-more:not(:checked) + .footer-contacts-toggle::after {
+  content: "See More";
+}
+#footer-contacts-see-more:checked + .footer-contacts-toggle {
+  order: 3;
+}
+
+.footer-third-last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.footer-third-last-child > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media screen and (width > 600px) {
+  /* Show the hidden contact div  xbenz*/
+  .footer-third-last-child {
+    flex-direction: row;
+    text-wrap: nowrap;
+    gap: clamp(3rem, 8vw, 15rem);
+  }
+
+  /* Remove see more button  xbenz */
+  .footer-contacts-toggle {
+    display: none;
+  }
+
+  #footer-contacts-see-more:not(:checked) ~ .f-contacts-hide {
+    display: flex;
+  }
+}
+
+@media screen and (width > 1024px) {
+  .footer-main {
+    display: flex;
+    flex-direction: row;
+    padding: 32px;
+    /* gap: 0 clamp(1rem, 5vw, 8rem); */
+    width: 100%;
+    max-width: 1300px;
+    justify-content: space-between;
+  }
+
+  .banner-container > div a {
+    text-decoration: underline;
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+
+  .banner-container > div {
+    bottom: -1.5rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-wrap: nowrap;
+    text-decoration: none;
+  }
+
+  /* .footer-banner-img {
+    animation: moveUpDown 3s ease-in-out infinite;
+  } */
+
+  .h2-hidden,
+  .footer-banner-img-confetti,
+  .footer-banner-img-cover,
+  .footer-third-last-child div hr {
+    display: block;
+  }
+
+  .footer-third-last-child {
+    justify-content: center;
+  }
+
+  .footer-banner-img-confetti {
+    position: absolute;
+    width: 110%;
+    height: auto;
+    top: 1.5rem;
+    animation: moveUpDown 1.2s ease-in-out infinite;
+  }
+
+  .footer-banner-img-cover {
+    position: absolute;
+    width: 28%;
+    height: auto;
+    bottom: 25%;
+    left: 5%;
+    /* animation: moveUpDown 3s ease-in-out infinite; */
+    transition: transform 0.3s ease;
+  }
+
+  .footer-banner-img-cover:hover {
+    transform: rotate(-10deg) translate(-10px, -40px);
+  }
+
+  .footer-main > div:nth-child(1) {
+    order: 1;
+    padding: unset;
+    width: clamp(300px, 30vw, 415px);
+  }
+  .footer-main > div:nth-child(2) {
+    order: 2;
+    padding: unset;
+    display: flex;
+  }
+  .footer-main > div:nth-child(3) {
+    order: 3;
+    padding: unset;
+    width: fit-content;
+  }
+
+  .footer-main div:first-child > h1,
+  .footer-main div:first-child > p,
+  .footer-main div:first-child > form {
+    display: block;
+    color: var(--white-color);
+  }
+
+  .footer-main div:first-child > h1 {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .footer-first-div form {
+    position: relative;
+  }
+  .footer-first-div input {
+    background-color: var(--white-color);
+    height: 3rem;
+    border-radius: 2rem;
+    width: 100%;
+  }
+  .footer-second-div div {
+    display: flex;
+  }
+
+  .footer-first-div input {
+    border: none;
+    outline: none;
+    padding-left: 1.5rem;
+  }
+  .footer-first-div button {
+    position: absolute;
+    height: 3rem;
+    right: 0;
+    padding: 0 2rem;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  }
+
+  .footer-banner-img {
+    margin-top: 2.5rem;
+    max-width: 26rem;
+    width: clamp(284px, 30vw, 400px);
+  }
+
+  .footer-third-last-child,
+  .footer-contacts-show {
+    flex-direction: column;
+  }
+
+  .dropdown-content {
+    max-height: 100rem;
+  }
+
+  .h2-desktop-hidden,
+  .footer-p-mobile,
+  .footer-contacts h3,
+  .footer-second-div hr,
+  .dropdown-toggle {
+    display: none;
+  }
+
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .footer-section > h2 {
+    display: block;
+    font-size: 1rem;
+  }
+  .dropdown-content li {
+    padding: 0;
+  }
+
+  .footer-second-div {
+    display: flex;
+    gap: 3rem;
+    height: fit-content;
+    margin: unset;
+    width: unset;
+  }
+  .footer-second-div > div {
+    display: flex;
+    gap: clamp(1rem, 3vw, 3rem);
+  }
+  .footer-payment-icons {
+    justify-content: start;
+    width: 10rem;
+  }
+
+  .footer-social-icons {
+    justify-content: start;
+    margin: 0;
+    padding: 1rem 0;
+    gap: clamp(1rem, 2vw, 4rem);
+  }
+  .footer-contacts {
+    gap: unset;
+  }
+
+  .footer-contacts label {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .footer-contacts li img {
+    width: 20px;
+    height: auto;
+    object-fit: contain;
+  }
+  .footer-contacts label img {
+    width: 1rem;
+  }
+
+  .footer-third-last-child,
+  .footer-third-last-child > div {
+    gap: 1rem;
+  }
+  .contacts-1-ul,
+  .contacts-2-ul,
+  .contacts-3-ul {
+    /* transition: var(--dropdown-transition); */
+    max-height: 0;
+    overflow: hidden;
+  }
+  /*  */
+
+  /* .contacts-1-dropdown:checked ~ .contacts-1-ul,
+  .contacts-2-dropdown:checked ~ .contacts-2-ul,
+  .contacts-3-dropdown:checked ~ .contacts-3-ul {
+    max-height: 20rem;
+    margin-top: 1rem;
+  } */
+
+  /* .contacts-dropdown.open .contacts-1-ul,
+  .contacts-dropdown.open .contacts-2-ul,
+  .contacts-dropdown.open .contacts-3-ul {
+    max-height: 20rem;
+    margin-top: 1rem;
+  } */
+
+  /* opens dropdown one at a time */
+  .footer-contacts.open .contacts-1-ul,
+  .footer-contacts.open .contacts-2-ul,
+  .footer-contacts.open .contacts-3-ul {
+    margin-top: 1rem;
+    max-height: 20rem; /* Or any height you want */
+  }
+
+  .footer-contacts.open .contacts-dropdown-icon {
+    transition: transform 0.3s ease;
+    transform: rotate(180deg); /* Rotate the icon when the dropdown is open */
+  }
+
+  /*  */
+  .contacts-1-dropdown:checked ~ .contacts-1-dropdown img {
+    rotate: 180deg;
+  }
+
+  .footer-bottom {
+    flex-direction: column-reverse;
+  }
+
+  .payment-methods-h2,
+  .footer-p-desktop {
+    display: block;
+  }
+
+  .footer-bottom div {
+    max-width: var(--max-vw);
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+/* Fully hand coded by Benz Samson Tagle --  https://benztagle.vercel.app/*/
