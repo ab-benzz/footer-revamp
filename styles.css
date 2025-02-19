@@ -169,18 +169,18 @@ footer ul {
   /* max-width: 40rem; */
   width: 100%;
   margin: 0 auto;
-  padding: 0 8%;
+  padding: 0 5%;
 }
 
 .footer-main > div:nth-child(1) {
   order: 1;
 }
 .footer-main > div:nth-child(2) {
-  padding: 0 8%;
+  padding: 0 5%;
   order: 3;
 }
 .footer-main > div:nth-child(3) {
-  padding: 0 8%;
+  padding: 0 5%;
   order: 2;
 }
 
@@ -297,7 +297,7 @@ footer div:first-child > form {
   flex-wrap: wrap;
   gap: 0.5rem;
   justify-content: center;
-  max-width: 30rem;
+  max-width: 33rem;
 }
 
 .footer-payment-icons li {
