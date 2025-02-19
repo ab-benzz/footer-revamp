@@ -320,6 +320,7 @@ footer div:first-child > form {
   display: flex;
   justify-content: space-between;
   transition: ease-in-out 1s;
+  font-weight: 500;
 }
 
 /* Dropdown Content */
@@ -363,7 +364,6 @@ footer div:first-child > form {
   width: fit-content;
   padding: 0.1rem 1rem;
   border-radius: 2rem;
-  margin-top: 1rem;
 }
 
 .footer-banner-img-confetti,
@@ -631,8 +631,8 @@ footer div:first-child > form {
   .footer-contacts.open .contacts-1-ul,
   .footer-contacts.open .contacts-2-ul,
   .footer-contacts.open .contacts-3-ul {
-    margin-top: 1rem;
-    max-height: 20rem; /* Or any height you want */
+    margin-top: 0.6rem;
+    max-height: 20rem;
   }
 
   .footer-contacts.open .contacts-dropdown-icon {
@@ -678,6 +678,10 @@ footer div:first-child > form {
   .footer-contacts > div:first-of-type {
     display: flex;
     flex-direction: column-reverse;
+  }
+
+  .footer-label-see-more {
+    margin-top: 0.8rem;
   }
 }
 
