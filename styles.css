@@ -109,7 +109,8 @@ footer {
 }
 
 .footer-bottom div {
-  margin: 1rem 0;
+  /* margin: 1rem 0; */
+  /* margin-top: 1rem; */
 }
 
 .footer-bottom p {
@@ -150,7 +151,7 @@ footer hr {
   background-color: #dfdfdf;
   opacity: 50%;
   height: 1px;
-  margin: 0 auto;
+  margin: 1rem auto;
   width: 100%;
 }
 footer ul {
@@ -235,6 +236,7 @@ footer div:first-child > form {
 .footer-section > h2 {
   display: none;
 }
+
 /*  Footer third div child  ---------------3rd*/
 
 .footer-third-div {
@@ -287,9 +289,6 @@ footer div:first-child > form {
   display: flex;
   gap: 0.8rem;
 }
-/* .footer-contacts p {
-  margin-top: 0.5rem;
-} */
 
 .footer-payment-icons {
   margin: 0 auto;
@@ -297,7 +296,7 @@ footer div:first-child > form {
   flex-wrap: wrap;
   gap: 0.5rem;
   justify-content: center;
-  max-width: 33rem;
+  /* max-width: 33rem; */
 }
 
 .footer-payment-icons li {
@@ -308,6 +307,22 @@ footer div:first-child > form {
 .footer-payment-icons img:hover {
   transform: scale(1.15);
 }
+
+.payment-methods-a {
+  border: 1px solid var(--white-color);
+  padding: 0.2rem 1rem;
+  border-radius: 32px;
+  text-align: center;
+  margin: 0.5rem auto 0;
+  width: max-content;
+}
+
+/* 
+.footer-payment-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
 
 /* Dropdown footer-second-div mobile view */
 .dropdown-checkbox {
@@ -376,7 +391,7 @@ footer div:first-child > form {
   display: none;
 }
 
-/* See more button in footer mobilev view */
+/* See more button in footer mobile view */
 #footer-contacts-see-more:checked ~ .f-contacts-hide {
   display: flex;
 }
@@ -404,6 +419,11 @@ footer div:first-child > form {
 }
 
 @media screen and (width > 600px) {
+  .footer-bottom-ul {
+    flex-direction: row !important;
+    gap: 1rem;
+  }
+
   /* Show the hidden contact div  xbenz*/
   .footer-third-last-child {
     flex-direction: row;
@@ -446,6 +466,9 @@ footer div:first-child > form {
     text-decoration: none;
   }
 
+  footer hr {
+    margin: unset;
+  }
   /* .footer-banner-img {
     animation: moveUpDown 3s ease-in-out infinite;
   } */
@@ -590,6 +613,10 @@ footer div:first-child > form {
     width: 10rem;
   }
 
+  .payment-methods-a {
+    display: none;
+  }
+
   .footer-social-icons {
     justify-content: start;
     margin: 0;
@@ -646,7 +673,7 @@ footer div:first-child > form {
   }
 
   .footer-bottom {
-    flex-direction: column-reverse;
+    /* flex-direction: column-reverse; */
   }
 
   .payment-methods-h2,
@@ -659,6 +686,7 @@ footer div:first-child > form {
     flex-direction: row;
     width: 100%;
     justify-content: space-around;
+    margin-top: unset;
   }
 
   /* See More desktop */
