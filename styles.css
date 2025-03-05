@@ -142,7 +142,7 @@ footer a:hover {
   color: var(--secondary-color);
 }
 footer h2 {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: var(--secondary-color);
   text-wrap: nowrap;
 }
@@ -296,7 +296,6 @@ footer div:first-child > form {
   flex-wrap: wrap;
   gap: 0.5rem;
   justify-content: center;
-  /* max-width: 33rem; */
 }
 
 .footer-payment-icons li {
@@ -316,13 +315,6 @@ footer div:first-child > form {
   margin: 0.5rem auto 0;
   width: max-content;
 }
-
-/* 
-.footer-payment-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 /* Dropdown footer-second-div mobile view */
 .dropdown-checkbox {
@@ -426,9 +418,9 @@ footer div:first-child > form {
 }
 
 @media screen and (width > 600px) {
-  footer h2 {
+  /* footer h2 {
     font-size: 0.875rem;
-  }
+  } */
   .footer-bottom-ul {
     flex-direction: row !important;
     gap: 1rem;
