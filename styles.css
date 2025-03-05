@@ -85,7 +85,7 @@ footer {
   position: relative;
   margin-top: 2rem;
   width: 100%;
-  /* background-color: var(--primary-color); */
+  background-color: var(--primary-color);
   background-image: url("images/footer_img/footer_background.webp");
 }
 .footer-main {
@@ -142,7 +142,7 @@ footer a:hover {
   color: var(--secondary-color);
 }
 footer h2 {
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: var(--secondary-color);
   text-wrap: nowrap;
 }
@@ -426,6 +426,9 @@ footer div:first-child > form {
 }
 
 @media screen and (width > 600px) {
+  footer h2 {
+    font-size: 0.875rem;
+  }
   .footer-bottom-ul {
     flex-direction: row !important;
     gap: 1rem;
@@ -619,6 +622,12 @@ footer div:first-child > form {
     display: flex;
     gap: clamp(1rem, 3vw, 3rem);
   }
+  .footer-second-div h2,
+  .h2-hidden {
+    font-weight: 600;
+    font-size: 16px;
+  }
+
   .footer-payment-icons {
     justify-content: start;
     width: 10rem;
