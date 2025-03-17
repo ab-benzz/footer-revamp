@@ -21,18 +21,6 @@
     0px 7px 15px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes moveUpDown {
-  0% {
-    transform: translateY(0); /* Start position */
-  }
-  50% {
-    transform: translateY(-0.5rem); /* Move up */
-  }
-  100% {
-    transform: translateY(0); /* Back to start */
-  }
-}
-
 .animate-fadeIn {
   animation: fadeIn 0.5s ease-in-out;
 }
@@ -44,41 +32,11 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-html {
-  scrollbar-gutter: stable;
-  scroll-behavior: smooth;
-}
-
 body {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
   font-family: "Poppins", sans-serif;
 }
 
-h2,
-p {
-  color: var(--main-text-color);
-  line-height: clamp(1rem, 3vw, 1.5rem);
-}
-h1 {
-  font-weight: 600;
-  line-height: 1;
-}
-p {
-  font-size: var(--p-font-size);
-}
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: var(--main-text-color);
-}
-
 /* Footer --- Footer --- Footer  --- Footer   --- Footer */
-
 footer {
   display: flex;
   flex-direction: column;
@@ -87,6 +45,31 @@ footer {
   width: 100%;
   background-color: var(--primary-color);
   background-image: url("images/footer_img/footer_background.webp");
+}
+
+footer h1 {
+  font-weight: 600;
+  line-height: 1;
+}
+
+footer a {
+  font-weight: 300;
+  text-decoration: none;
+  color: var(--main-text-color);
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer p {
+  font-size: var(--p-font-size);
+}
+
+footer h2,
+footer p {
+  color: var(--main-text-color);
+  line-height: clamp(1rem, 3vw, 1.5rem);
 }
 .footer-main {
   margin: 0 auto;
@@ -126,13 +109,6 @@ footer p,
   font-weight: 300;
 }
 
-.h2-hidden,
-.payment-methods-h2 {
-  display: none;
-}
-footer a {
-  font-weight: 300;
-}
 footer a:hover {
   color: var(--secondary-color);
 }
@@ -185,14 +161,6 @@ footer ul {
 .footer-first-child > div {
   display: flex;
   flex-direction: column;
-}
-
-.banner-cta p,
-.footer-p-desktop,
-.footer-contacts > p,
-footer div:first-child > h1,
-footer div:first-child > form {
-  display: none;
 }
 
 .footer-p-hidden {
@@ -302,15 +270,6 @@ footer div:first-child > form {
   transform: scale(1.15);
 }
 
-.payment-methods-a {
-  border: 1px solid var(--white-color);
-  padding: 0.2rem 1rem;
-  border-radius: 32px;
-  text-align: center;
-  margin: 0.5rem auto 0;
-  width: max-content;
-}
-
 /* Dropdown footer-second-div mobile view */
 .dropdown-checkbox {
   display: none; /* Hide the checkbox, this is for the dropdown of footer 2nd div*/
@@ -374,6 +333,13 @@ footer div:first-child > form {
   border-radius: 2rem;
 }
 
+.banner-cta p,
+.footer-p-desktop,
+.footer-contacts > p,
+footer div:first-child > h1,
+footer div:first-child > form,
+.h2-hidden,
+.payment-methods-h2,
 .footer-banner-img-confetti,
 .footer-banner-img-cover,
 #footer-contacts-see-more,
@@ -413,9 +379,6 @@ footer div:first-child > form {
 }
 
 @media screen and (width > 600px) {
-  /* footer h2 {
-    font-size: 0.875rem;
-  } */
   .footer-bottom-ul {
     flex-direction: row !important;
     gap: 1rem;
@@ -443,7 +406,6 @@ footer div:first-child > form {
     display: flex;
     flex-direction: row;
     padding: 32px;
-    /* gap: 0 clamp(1rem, 5vw, 8rem); */
     width: 100%;
     max-width: 1300px;
     justify-content: space-between;
@@ -470,7 +432,9 @@ footer div:first-child > form {
   .h2-hidden,
   .footer-banner-img-confetti,
   .footer-banner-img-cover,
-  .footer-third-last-child div hr {
+  .footer-third-last-child div hr,
+  .payment-methods-h2,
+  .footer-p-desktop {
     display: block;
   }
 
@@ -492,7 +456,6 @@ footer div:first-child > form {
     height: auto;
     bottom: 25%;
     left: 5%;
-    /* animation: moveUpDown 3s ease-in-out infinite; */
     transition: transform 0.3s ease;
   }
 
@@ -531,6 +494,7 @@ footer div:first-child > form {
   .footer-first-div form {
     position: relative;
   }
+
   .footer-first-div input {
     background-color: var(--white-color);
     height: 3rem;
@@ -653,7 +617,6 @@ footer div:first-child > form {
   .contacts-1-ul,
   .contacts-2-ul,
   .contacts-3-ul {
-    /* transition: var(--dropdown-transition); */
     max-height: 0;
     overflow: hidden;
   }
@@ -674,11 +637,6 @@ footer div:first-child > form {
   /*  */
   .contacts-1-dropdown:checked ~ .contacts-1-dropdown img {
     rotate: 180deg;
-  }
-
-  .payment-methods-h2,
-  .footer-p-desktop {
-    display: block;
   }
 
   .footer-bottom div {
