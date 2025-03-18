@@ -514,8 +514,83 @@
 
 </html>
 
-
 <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const checkboxes = document.querySelectorAll('.dropdown-checkbox, .contacts-1-dropdown, .contacts-2-dropdown, .contacts-3-dropdown');
+        const dropdownContainers = document.querySelectorAll('.footer-section, .footer-contacts');
+        const footerSeeMore = document.querySelector("#footer-see-more");
+        const contacts2 = document.querySelector(".contacts-2");
+        const footerSeeMoreLabel = document.querySelector('label[for="footer-see-more"]'); // Get the label associated with the toggle
+        const footerContacts = document.querySelector(".footer-contacts.contacts-1"); // Target the container with the open class
+        const contacts1Dropdown = document.querySelector('#contacts-1-dropdown');
+        const contacts2Dropdown = document.querySelector('#contacts-2-dropdown');
+        const contacts3Dropdown = document.querySelector('#contacts-3-dropdown');
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function () {
+                const parentDropdown = this.closest('.footer-section, .footer-contacts');
+                const icon = parentDropdown.querySelector('label .dropdown-toggle img, .contacts-dropdown-icon');
+
+                if (this.checked) {
+                    parentDropdown.classList.add('open');
+                    if (icon) icon.style.transform = 'rotate(180deg)';
+                } else {
+                    parentDropdown.classList.remove('open');
+                    if (icon) icon.style.transform = 'rotate(0deg)';
+                }
+
+                // Close other dropdowns
+                dropdownContainers.forEach(dropdown => {
+                    const checkboxInput = dropdown.querySelector('input[type="checkbox"]');
+                    if (checkboxInput && dropdown !== parentDropdown) {
+                        dropdown.classList.remove('open');
+                        checkboxInput.checked = false;
+                        const otherIcon = dropdown.querySelector('label .dropdown-toggle img, .contacts-dropdown-icon');
+                        if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+                    }
+                });
+
+                // Apply max-height if any dropdown is open
+                const anyContactDropdownOpen = document.querySelector('.contacts-1-dropdown:checked, .contacts-2-dropdown:checked, .contacts-3-dropdown:checked');
+                if (anyContactDropdownOpen) {
+                    footerSeeMore.parentElement.classList.add('contacts-dropdown-open');
+                } else {
+                    footerSeeMore.parentElement.classList.remove('contacts-dropdown-open');
+                }
+            });
+        });
+
+        // Toggle "f-contacts-hide" on contacts-2 when #footer-see-more is toggled
+        footerSeeMore.addEventListener("change", function () {
+            if (this.checked) {
+                contacts2.classList.remove("f-contacts-hide");
+            } else {
+                contacts2.classList.add("f-contacts-hide");
+            }
+
+            // Remove "open" class from the footer-contacts when the toggle is clicked
+            if (footerSeeMore.checked) {
+                footerContacts.classList.remove("open");
+            }
+
+            // Untoggle all the contacts dropdowns when #footer-see-more is toggled
+            contacts1Dropdown.checked = false;
+            contacts2Dropdown.checked = false;
+            contacts3Dropdown.checked = false;
+
+            // Additionally, remove "open" class from footer-contacts containers for contacts 2 and 3
+            const contacts2Footer = document.querySelector(".footer-contacts.contacts-2");
+            const contacts3Footer = document.querySelector(".footer-contacts.contacts-3");
+            if (contacts2Footer) contacts2Footer.classList.remove('open');
+            if (contacts3Footer) contacts3Footer.classList.remove('open');
+        });
+    });
+
+</script>
+
+
+
+<!-- <script>
     document.addEventListener('DOMContentLoaded', function () {
         // Select all checkboxes for both footer and contacts dropdowns
         const checkboxes = document.querySelectorAll('.dropdown-checkbox, .contacts-1-dropdown, .contacts-2-dropdown, .contacts-3-dropdown');
@@ -561,51 +636,4 @@
         });
     });
 
-</script>
-<!-- <script>
-    // Select all the checkboxes and dropdown containers
-    const checkboxes = document.querySelectorAll('.contacts-1-dropdown, .contacts-2-dropdown, .contacts-3-dropdown, contacts-4-dropdown, .contacts-5-dropdown, .contacts-6-dropdown');
-    const footerContacts = document.querySelectorAll('.footer-contacts');
-
-    // Loop through each checkbox and add event listeners
-    checkboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', function () {
-            // Get the parent container of the clicked checkbox
-            const parentDropdown = this.closest('.footer-contacts');
-            const icon = parentDropdown.querySelector('.contacts-dropdown-icon');
-
-            console.log(`Checkbox ${this.id} changed. Checked: ${this.checked}`);
-
-            // If the checkbox is checked, open the dropdown
-            if (this.checked) {
-                console.log(`Opening dropdown for: ${this.id}`);
-                parentDropdown.classList.add('open');
-                if (icon) {
-                    icon.style.transform = 'rotate(180deg)'; // Rotates icon when opened
-                }
-            } else {
-                console.log(`Closing dropdown for: ${this.id}`);
-                parentDropdown.classList.remove('open');
-                if (icon) {
-                    icon.style.transform = 'rotate(0deg)'; // Rotates back when closed
-                }
-            }
-
-            // Close all other dropdowns by removing the 'open' class
-            footerContacts.forEach(dropdown => {
-                const checkboxInput = dropdown.querySelector('input[type="checkbox"]');
-
-                // Ensure checkbox exists and the parent is not the clicked one
-                if (checkboxInput && dropdown !== parentDropdown) {
-                    console.log(`Closing dropdown for: ${checkboxInput.id}`);
-                    dropdown.classList.remove('open');
-                    checkboxInput.checked = false;
-                    const otherIcon = dropdown.querySelector('.contacts-dropdown-icon');
-                    if (otherIcon) {
-                        otherIcon.style.transform = 'rotate(0deg)'; // Reset other icons when other dropdown is closed
-                    }
-                }
-            });
-        });
-    });
 </script> -->

@@ -671,4 +671,9 @@ footer div:first-child > form,
   }
 }
 
+@media screen and (min-width: 1025px) {
+  .contacts-dropdown-open #footer-see-more:not(:checked) ~ ul {
+    max-height: 52.8px;
+  }
+}
 /* Fully hand coded by Benz Samson Tagle --  https://benztagle.vercel.app/*/
