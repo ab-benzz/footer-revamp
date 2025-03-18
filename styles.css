@@ -315,9 +315,10 @@ footer ul {
   max-height: 20rem;
 }
 
-.dropdown-checkbox:checked ~ .dropdown-toggle img {
-  rotate: 180deg;
-}
+/* removed to fix bug that prohibits icon rotation in mobile vp */
+/* .dropdown-checkbox:checked ~ .dropdown-toggle img {
+  rotate: 180deg !important;
+} */
 
 .footer-contacts-show {
   display: flex;
