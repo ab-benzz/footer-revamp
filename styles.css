@@ -466,7 +466,7 @@ footer div:first-child > form,
   .footer-main > div:nth-child(1) {
     order: 1;
     padding: unset;
-    width: clamp(300px, 30vw, 415px);
+    width: clamp(300px, 36vw, 440px);
   }
   .footer-main > div:nth-child(2) {
     order: 2;
@@ -489,6 +489,10 @@ footer div:first-child > form,
   .footer-main div:first-child > h1 {
     font-size: 1.25rem;
     font-weight: 600;
+  }
+  .footer-main div:first-child > p {
+    font-weight: 400;
+    font-size: 14px;
   }
 
   .footer-first-div form {
@@ -632,11 +636,6 @@ footer div:first-child > form,
   .footer-contacts.open .contacts-dropdown-icon {
     transition: transform 0.3s ease;
     transform: rotate(180deg); /* Rotate the icon when the dropdown is open */
-  }
-
-  .contacts-dropdown-icon {
-    transform: rotate(0deg); /* Ensure the icon is at 0deg by default */
-    transition: transform 0.3s ease; /* Optional for smooth transition */
   }
 
   /*  */
