@@ -634,10 +634,19 @@ footer div:first-child > form,
     transform: rotate(180deg); /* Rotate the icon when the dropdown is open */
   }
 
+  .contacts-dropdown-icon {
+    transform: rotate(0deg); /* Ensure the icon is at 0deg by default */
+    transition: transform 0.3s ease; /* Optional for smooth transition */
+  }
+
   /*  */
   .contacts-1-dropdown:checked ~ .contacts-1-dropdown img {
     rotate: 180deg;
   }
+
+  /* .footer-contacts label:not(:checked) .contacts-1-dropdown img {
+    rotate: unset;
+  } */
 
   .footer-bottom div {
     max-width: var(--max-vw);
