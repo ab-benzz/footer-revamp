@@ -1,24 +1,8 @@
 :root {
-  --primary-color: #1e22aa;
-  --secondary-color: #fae100;
-  --white-color: #fdfcff;
-  --main-text-color: #4c525c;
-  --sub-text-color: #767676;
-
-  --sub-blue-color: #d7f1ff;
-  --ter-blue-color: #1877f2;
-  --card-radius: 1rem;
-  --form-invalid-color: #ff2222;
-  --max-vw: 87.5rem;
-  --main-padding: 0 1.875rem;
-  --main-border-radius: 1.25rem;
-  --p-font-size: 0.92rem;
-  --dropdown-transition: 0.5s ease-out;
-  --hover-on-blue-bg: rgba(0, 0, 0, 0.3);
-  --popup-radius: 0.93rem;
-  --popup-box-shadow: 0px 106px 42px rgba(0, 0, 0, 0.01),
-    0px 60px 36px rgba(0, 0, 0, 0.05), 0px 27px 27px rgba(0, 0, 0, 0.09),
-    0px 7px 15px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  --footer-bg-color: #1e22aa;
+  --footer-white-color: #fdfcff;
+  --footer-max-vw: 1400px;
+  --p-font-size: 14.72px;
 }
 
 .animate-fadeIn {
@@ -41,9 +25,9 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-top: 2rem;
+  margin-top: 32px;
   width: 100%;
-  background-color: var(--primary-color);
+  background-color: var(--footer-bg-color, #1e22aa);
   background-image: url("images/footer_img/footer_background.webp");
 }
 
@@ -59,7 +43,7 @@ body {
 
 #abenson-footer ul {
   list-style: none;
-  margin-left: 0rem;
+  margin-left: 0;
 }
 
 #abenson-footer p {
@@ -67,8 +51,8 @@ body {
 }
 
 #abenson-footer p {
-  color: var(--white-color, #fdfcff);
-  line-height: clamp(1rem, 3vw, 1.5rem);
+  color: var(--footer-white-color, #fdfcff);
+  line-height: clamp(16px, 3vw, 24px);
 }
 .footer-main {
   margin: 0 auto;
@@ -85,9 +69,9 @@ body {
 
 .footer-bottom ul {
   display: flex;
-  gap: clamp(0.5rem, 5vw, 1rem);
+  gap: clamp(8px, 5vw, 16px);
   text-decoration: underline;
-  color: var(--white-color);
+  color: var(--footer-white-color, #fdfcff);
 }
 
 .footer-bottom p {
@@ -95,21 +79,25 @@ body {
   text-align: center;
 }
 
-#abenson-footer label,
 #abenson-footer a,
 #abenson-footer p,
+#abenson-footer label,
 .footer-section-link {
-  color: var(--white-color);
+  color: var(--footer-white-color, #fdfcff);
   font-size: 13px;
   font-weight: 300;
 }
+.footer-dropdown-toggle,
+.footer-section-link {
+  font-weight: 500 !important;
+}
 
 #abenson-footer a:hover {
-  color: var(--secondary-color);
+  color: var(--currentColor, #fae100);
 }
 #abenson-footer h2 {
-  font-size: 0.9rem;
-  color: var(--secondary-color);
+  font-size: 14.4px;
+  color: var(--currentColor, #fae100);
   text-wrap: nowrap;
 }
 
@@ -118,14 +106,14 @@ footer hr {
   background-color: #dfdfdf;
   opacity: 50%;
   height: 1px;
-  margin: 1rem auto;
+  margin: 16px auto;
   width: 100%;
 }
 
 #abenson-footer .footer-cta {
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 4.8px;
 }
 
 .footer-second-div {
@@ -169,24 +157,24 @@ footer hr {
 
 .footer-banner-container > div {
   display: flex;
-  gap: clamp(0.3rem, 2vw, 1.5rem);
+  gap: clamp(4.8px, 2vw, 24px);
   position: absolute;
   bottom: 28%;
   right: 6%;
-  color: var(--white-color);
+  color: var(--footer-white-color, #fdfcff);
 }
 
 .footer-banner-container > div > a {
-  font-size: clamp(0.7rem, 2vw, 0.8rem);
+  font-size: clamp(11.2px, 2vw, 12.8px);
   text-decoration: underline;
 }
 
 /*  Footer second div child  ---------------2nd*/
 .footer-second-div {
-  margin-top: 2rem;
+  margin-top: 32px;
 }
 .footer-second-div hr {
-  margin: 1rem 0;
+  margin: 16px 0;
 }
 .footer-section > h2 {
   display: none;
@@ -197,8 +185,8 @@ footer hr {
 .footer-third-div {
   display: flex;
   flex-direction: column;
-  padding: 1rem auto;
-  gap: 1rem;
+  padding: 16px auto;
+  gap: 16px;
 }
 
 .footer-social-icons {
@@ -208,14 +196,14 @@ footer hr {
   margin: 0 auto;
   overflow-x: hidden;
   padding: 16px 16px 0;
-  max-width: 40rem;
+  max-width: 640px;
 }
 .footer-social-icons a:hover {
   transform: scale(1.1);
 }
 
 .footer-social-icons a:hover path {
-  fill: var(--secondary-color);
+  fill: var(--currentColor, #fae100);
 }
 
 .footer-social-icons a svg {
@@ -226,29 +214,29 @@ footer hr {
 .footer-contacts {
   display: flex;
   flex-direction: column;
-  color: var(--white-color);
-  gap: 0.5rem;
+  color: var(--footer-white-color, #fdfcff);
+  gap: 8px;
 }
 
 .footer-contacts h3 {
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 500;
 }
 .footer-contacts ul {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 8px;
 }
 .footer-contacts ul > li {
   display: flex;
-  gap: 0.8rem;
+  gap: 8px;
 }
 
 .footer-payment-icons {
   margin: 10px auto 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 8px;
   justify-content: center;
 }
 
@@ -303,21 +291,21 @@ footer hr {
 
 /* Toggle Dropdown on Checkbox Check */
 .footer-dropdown-checkbox:checked ~ .footer-dropdown-ul {
-  max-height: 20rem;
+  max-height: 320px;
 }
 
 .footer-contacts-show {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 16px;
 }
 
 .footer-contacts-toggle,
 .footer-label-see-more {
-  border: 1px solid var(--white-color);
+  border: 1px solid var(--footer-white-color, #fdfcff);
   width: fit-content;
-  padding: 0.1rem 1rem;
-  border-radius: 2rem;
+  padding: 1.6px 16px;
+  border-radius: 32px;
 }
 
 .footer-cta p,
@@ -356,26 +344,26 @@ footer div:first-child > form,
 .footer-third-last-child {
   display: flex;
   flex-direction: column;
-  gap: 1.3rem;
+  gap: 20.8px;
 }
 
 .footer-third-last-child > div {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 24px;
 }
 
 @media screen and (width > 600px) {
   .footer-bottom-ul {
     flex-direction: row !important;
-    gap: 1rem;
+    gap: 16px;
   }
 
   /* Show the hidden contact div  xbenz*/
   .footer-third-last-child {
     flex-direction: row;
     text-wrap: nowrap;
-    gap: clamp(3rem, 8vw, 15rem);
+    gap: clamp(48px, 8vw, 240px);
   }
 
   /* Remove see more button  xbenz */
@@ -404,12 +392,12 @@ footer div:first-child > form,
 
   .footer-banner-container > div a {
     text-decoration: underline;
-    font-size: 0.8rem;
+    font-size: 12.8px;
     font-weight: 400;
   }
 
   .footer-banner-container > div {
-    bottom: -1.5rem;
+    bottom: -24px;
     left: 50%;
     transform: translate(-50%, 0);
     text-wrap: nowrap;
@@ -437,7 +425,7 @@ footer div:first-child > form,
     position: absolute;
     width: 110%;
     height: auto;
-    top: 1.5rem;
+    top: 24px;
     animation: moveUpDown 1.2s ease-in-out infinite;
   }
 
@@ -474,11 +462,11 @@ footer div:first-child > form,
   .footer-main div:first-child > p,
   .footer-main div:first-child > form {
     display: block;
-    color: var(--white-color);
+    color: var(--footer-white-color);
   }
 
   .footer-main div:first-child > h1 {
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 600;
   }
   .footer-main div:first-child > p {
@@ -491,9 +479,9 @@ footer div:first-child > form,
   }
 
   .footer-first-div input {
-    background-color: var(--white-color);
-    height: 3rem;
-    border-radius: 2rem;
+    background-color: var(--footer-white-color, #fdfcff);
+    height: 48px;
+    border-radius: 32px;
     width: 100%;
   }
   .footer-second-div div,
@@ -509,20 +497,20 @@ footer div:first-child > form,
   .footer-first-div input {
     border: none;
     outline: none;
-    padding-left: 1.5rem;
+    padding-left: 24px;
   }
   .footer-first-div button {
     position: absolute;
-    height: 3rem;
+    height: 48px;
     right: 0;
-    padding: 0 2rem;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
+    padding: 0 16px;
+    background-color: var(--currentColor, #fae100);
+    color: var(--footer-bg-color, #1e22aa);
   }
 
   .footer-banner-img {
-    margin-top: 2.5rem;
-    max-width: 26rem;
+    margin-top: 40px;
+    max-width: 416px;
     width: clamp(284px, 30vw, 400px);
   }
 
@@ -532,7 +520,7 @@ footer div:first-child > form,
   }
 
   .footer-dropdown-ul {
-    max-height: 100rem;
+    max-height: 1600px;
   }
 
   .footer-h2-desktop-hidden,
@@ -547,11 +535,11 @@ footer div:first-child > form,
   .footer-section {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 12.8px;
   }
   .footer-section > h2 {
     display: block;
-    font-size: 1rem;
+    font-size: 16px;
   }
   .footer-dropdown-ul li {
     padding: 0;
@@ -559,14 +547,14 @@ footer div:first-child > form,
 
   .footer-second-div {
     display: flex;
-    gap: 3rem;
+    gap: 48px;
     height: fit-content;
     margin: unset;
     width: unset;
   }
   .footer-second-div > div {
     display: flex;
-    gap: clamp(1rem, 3vw, 3rem);
+    gap: clamp(16px, 3vw, 48px);
   }
   .footer-second-div h2,
   .footer-h2-hidden {
@@ -576,15 +564,15 @@ footer div:first-child > form,
 
   .footer-payment-icons {
     justify-content: start;
-    width: 10rem;
+    width: 160px;
     margin: 0 auto;
   }
 
   .footer-social-icons {
     justify-content: start;
     margin: 0;
-    padding: 1rem 0;
-    gap: clamp(1rem, 2.5vw, 4rem);
+    padding: 16px 0;
+    gap: clamp(16px, 2.5vw, 64px);
   }
 
   .footer-contacts,
@@ -607,12 +595,12 @@ footer div:first-child > form,
     object-fit: contain;
   }
   .footer-contacts label img {
-    width: 1rem;
+    width: 16px;
   }
 
   .footer-third-last-child,
   .footer-third-last-child > div {
-    gap: 1rem;
+    gap: 16px;
   }
   .footer-contacts-1-ul,
   .footer-contacts-2-ul,
@@ -625,8 +613,8 @@ footer div:first-child > form,
   .footer-contacts.open .footer-contacts-1-ul,
   .footer-contacts.open .footer-contacts-2-ul,
   .footer-contacts.open .footer-contacts-3-ul {
-    margin-top: 0.6rem;
-    max-height: 20rem;
+    margin-top: 9.6px;
+    max-height: 320px;
   }
 
   .footer-contacts.open .footer-contacts-dropdown-icon {
@@ -637,9 +625,12 @@ footer div:first-child > form,
   .footer-contacts-1-dropdown:checked ~ .footer-contacts-1-dropdown img {
     rotate: 180deg;
   }
+  .footer-contacts-1-dropdown:checked ~ .footer-contacts-1-dropdown img {
+    rotate: 180deg;
+  }
 
   .footer-bottom div {
-    max-width: var(--max-vw);
+    max-width: var(--footer-max-vw);
     flex-direction: row;
     width: 100%;
     justify-content: space-around;
@@ -655,7 +646,7 @@ footer div:first-child > form,
   }
 
   #footer-see-more:not(:checked) ~ ul {
-    max-height: 3.3rem;
+    max-height: 52.8px;
     overflow: hidden;
   }
 
@@ -665,13 +656,12 @@ footer div:first-child > form,
   }
 
   .footer-label-see-more {
-    margin-top: 0.8rem;
+    margin-top: 12.8px;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .footer-contacts-dropdown-open #footer-see-more:not(:checked) ~ ul {
     max-height: 52.8px;
   }
 }
-/* Fully hand coded by Benz Samson Tagle --  https://benztagle.vercel.app/*/

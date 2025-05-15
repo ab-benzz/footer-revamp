@@ -59,11 +59,27 @@
                 <div class="footer-links-shopper">
                     <h2>Personal Shopper</h2>
                     <ul>
-
-                        <li><a href="Tel:+63288118811">(02) 8811-8811</a></li>
-                        <li><a href="Tel:+639999911226">09999911226</a></li>
-                        <li><a href="Tel:+639999911226">Viber</a></li>
-
+                        <li>
+                            <a href="Tel:+63288118811">
+                                <img src="images/footer_img/footer_contacts/footer_telephone.png" alt="telephone"
+                                    loading="lazy" width="20" height="20">
+                                (02) 8811-8811
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Tel:+639999911226">
+                                <img src="images/footer_img/footer_contacts/footer_phone.png" alt="telephone"
+                                    loading="lazy" width="20" height="20">
+                                09999911226
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Tel:+639999911226">
+                                <img src="images/footer_img/footer_contacts/footer_viber.png" alt="telephone"
+                                    loading="lazy" width="20" height="20">
+                                Viber
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
@@ -72,9 +88,12 @@
                 <div>
                     <h2>Discover</h2>
                     <ul>
-                        <li><a href="https://www.abenson.com/abensoncare" target="_blank">Privacy Policy</a></li>
-                        <li><a href="https://www.abenson.com/abensoncare" target="_blank">Terms of Use</a></li>
-                        <li><a href="https://www.abenson.com/abensoncare" target="_blank">Warranty</a></li>
+                        <li><a href="https://automatic.abenson.com/automatic-centre-privacy-policy"
+                                target="_blank">Privacy Policy</a></li>
+                        <li><a href="https://automatic.abenson.com/automatic-centre-terms-of-use" target="_blank">Terms
+                                of Use</a></li>
+                        <li><a href="https://automatic.abenson.com/automatic-centre-warranty"
+                                target="_blank">Warranty</a></li>
                     </ul>
                 </div>
 
@@ -83,8 +102,10 @@
                 <div>
                     <h2>Support</h2>
                     <ul>
-                        <li><a href="https://www.abenson.com/abensoncare" target="_blank">Order Tracker</a></li>
-                        <li><a href="https://www.abenson.com/abensoncare" target="_blank">Store Locator</a></li>
+                        <li><a href="https://automatic.abenson.com/tracker/order/" target="_blank">Order Tracker</a>
+                        </li>
+                        <li><a href="https://automatic.abenson.com/automatic-store-locator" target="_blank">Store
+                                Locator</a></li>
                     </ul>
                 </div>
 
@@ -188,11 +209,27 @@
                 <div class="footer-links-shopper-desktop">
                     <h2>Personal Shopper</h2>
                     <ul>
-
-                        <li><a href="Tel:+63288118811">(02) 8811-8811</a></li>
-                        <li><a href="Tel:+639999911226">09999911226</a></li>
-                        <li><a href="Tel:+639999911226">Viber</a></li>
-
+                        <li>
+                            <a href="Tel:+630288118811">
+                                <img src="images/footer_img/footer_contacts/footer_telephone.png" alt="telephone"
+                                    loading="lazy" width="20" height="20">
+                                (02) 8811-8811
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Tel:+639999911226">
+                                <img src="images/footer_img/footer_contacts/footer_phone.png" alt="telephone"
+                                    loading="lazy" width="20" height="20">
+                                09999911226
+                            </a>
+                        </li>
+                        <li>
+                            <a href="viber://pa?chatURI=automaticcentre/">
+                                <img src="images/footer_img/footer_contacts/footer_viber.png" alt="telephone"
+                                    loading="lazy" width="20" height="20">
+                                Viber
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
@@ -205,7 +242,7 @@
 
         <div class="footer-bottom">
             <hr>
-            <p>Copyright © 2022 Abenson Ventures Inc. All rights reserved.</p>
+            <p>Copyright © 2025 Abenson Ventures Inc. All rights reserved.</p>
         </div>
     </footer>
 
@@ -478,7 +515,6 @@
         transform: scale(1.15);
     }
 
-    .footer-dropdown-toggle,
     .footer-section-link {
         display: block;
         cursor: pointer;
@@ -493,46 +529,7 @@
         justify-content: space-between;
     }
 
-    /* Dropdown Content */
-    .footer-dropdown-ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: var(--dropdown-transition);
-    }
 
-    .footer-dropdown-ul li {
-        padding: 10px;
-    }
-
-    .footer-dropdown-ul li a {
-        text-decoration: none;
-        display: block;
-        transition: color 0.3s;
-    }
-
-    /* Toggle Dropdown on Checkbox Check */
-    .footer-dropdown-checkbox:checked~.footer-dropdown-ul {
-        max-height: 320px;
-    }
-
-    .footer-contacts-show {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .footer-contacts-toggle
-
-    /* .footer-label-see-more  */
-        {
-        border: 1px solid var(--footer-white-color, #fdfcff);
-        width: fit-content;
-        padding: 1.6px 16px;
-        border-radius: 32px;
-    }
 
     .footer-cta p,
     .footer-p-desktop,
@@ -553,21 +550,18 @@
         display: none;
     }
 
-    /* See more button in footer mobile view */
-    #footer-contacts-see-more:checked~.footer-contacts-hide {
+    .footer-links-shopper li>a,
+    .footer-links-shopper-desktop li>a {
+        align-items: center;
         display: flex;
+        gap: 8px !important;
     }
 
-    #footer-contacts-see-more:checked+.footer-contacts-toggle::after {
-        content: "See less";
-    }
-
-    #footer-contacts-see-more:not(:checked)+.footer-contacts-toggle::after {
-        content: "See More";
-    }
-
-    #footer-contacts-see-more:checked+.footer-contacts-toggle {
-        order: 3;
+    .footer-links-shopper ul,
+    .footer-links-shopper-desktop ul {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
     }
 
     .footer-third-last-child {
@@ -648,7 +642,6 @@
         }
 
 
-
         .footer-h2-hidden,
         .footer-banner-img-confetti,
         .footer-banner-img-cover,
@@ -663,13 +656,13 @@
             justify-content: center;
         }
 
-        .footer-banner-img-confetti {
+        /* .footer-banner-img-confetti {
             position: absolute;
             width: 110%;
             height: auto;
             top: 24px;
             animation: moveUpDown 1.2s ease-in-out infinite;
-        }
+        } */
 
         .footer-banner-img-cover {
             position: absolute;
@@ -761,8 +754,7 @@
             width: clamp(284px, 30vw, 400px);
         }
 
-        .footer-third-last-child,
-        .footer-contacts-show {
+        .footer-third-last-child {
             flex-direction: column;
         }
 
@@ -774,7 +766,6 @@
         .footer-p-mobile,
         .footer-contacts h3,
         .footer-second-div hr,
-        .footer-dropdown-toggle,
         .footer-links-shopper {
             display: none !important;
         }
@@ -790,9 +781,6 @@
             font-size: 16px;
         }
 
-        .footer-dropdown-ul li {
-            padding: 0;
-        }
 
         .footer-second-div {
             display: flex;
@@ -832,14 +820,6 @@
             font-size: 12px !important;
         }
 
-        .footer-contacts label {
-            display: flex;
-            justify-content: space-between;
-            cursor: pointer;
-            font-size: 12px !important;
-            font-weight: 400 !important;
-            margin-bottom: unset !important;
-        }
 
         .footer-contacts li img {
             width: 20px;
@@ -862,24 +842,6 @@
         .footer-contacts-3-ul {
             max-height: 0;
             overflow: hidden;
-        }
-
-        /* opens dropdown one at a time */
-        .footer-contacts.open .footer-contacts-1-ul,
-        .footer-contacts.open .footer-contacts-2-ul,
-        .footer-contacts.open .footer-contacts-3-ul {
-            margin-top: 9.6px !important;
-            max-height: 320px;
-        }
-
-        .footer-contacts.open .footer-contacts-dropdown-icon {
-            transition: transform 0.3s ease;
-            transform: rotate(180deg);
-            /* Rotate the icon when the dropdown is open */
-        }
-
-        .footer-contacts-1-dropdown:checked~.footer-contacts-1-dropdown img {
-            rotate: 180deg;
         }
 
         .footer-bottom div {
