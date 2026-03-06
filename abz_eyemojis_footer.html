@@ -233,9 +233,30 @@
             <hr>
             <p>Copyright © 2025 Abenson Ventures Inc. All rights reserved.</p>
         </div>
+
+        <img src="images/eyemoji_1.png" alt="" id="footer-eyemoji">
     </footer>
 
 
+    <style>
+        #footer-eyemoji {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const totalImages = 2; // how many eyemoji images exist
+            const randomNum = Math.floor(Math.random() * totalImages) + 1;
+
+            const eyemoji = document.getElementById("footer-eyemoji");
+            eyemoji.src = "images/eyemoji_" + randomNum + ".png";
+
+        });
+    </script>
 
 
 
